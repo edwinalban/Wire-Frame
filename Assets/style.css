@@ -1,0 +1,62 @@
+* {
+    box-sizing: border-box;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+body {
+    margin: 5em;
+}
+
+header {
+    text-align: center;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card {
+    flex: 1;
+    justify-content: space-evenly;
+    position: relative;
+    border: dashed blue 1px;
+    margin: 20px 10px 20px 10px;
+    padding: 2em 1% 1% 1%;
+    min-width: 370px;
+}
+
+.title {
+    position: absolute;
+    left: 35%;
+    top: -5%;
+    border: solid purple 0.1vw;
+    z-index: 1;
+    background-color: grey;
+    border-radius: 5px;
+    
+}
+
+#linear-title {
+    position: absolute;
+    top: -3%;
+    left: 35%;
+}
+
+#box-glow-title {
+    position: absolute;
+    top: -3%;
+    left: 30%;
+}
+
+@media screen and (min-width: 768px) {
+    .row {
+        flex: 0 0 100%;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .row {
+        flex: 1 0 100%;
+    }
+}
