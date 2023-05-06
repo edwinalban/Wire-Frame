@@ -26,9 +26,11 @@
                         <p>
                             Use these three properties to create a Flexbox row layout.
                         </p>
-                        <pre>
+                        <pre class="linear-gradient-background">
 
 
+      
+    
     .row {
         display: flex;
         flex-direction: row;
@@ -43,9 +45,13 @@
                         <p>
                             Use this to create a Flexbox column layout.
                         </p>
-                            <pre>
+                            <pre class="linear-gradient-background">
 
 
+    
+    
+    
+    
     .column {
         display: flex;
         flex-direction: column;
@@ -59,15 +65,17 @@
                         <p>
                             Build a 12-column layout using CSS Grid.
                         </p>
-                            <pre>
+                            <pre class="linear-gradient-background">
 
 
-.grid {
-    display: gird;
-    width: 100%;
-    grid-template-columns:
-repeat(12, 1fr);
-}
+
+
+    .grid {
+        display: grid;
+        width: 100%;
+        grid-template-columns:
+    repeat(12, 1fr);
+    }
                             </pre>
                 </div>
                 <div class="card">
@@ -77,15 +85,17 @@ repeat(12, 1fr);
                         <p>
                             This will create a background linear gradient from top to bottom.
                         </p>
-                        <pre>
+                        <pre class="linear-gradient-background">
+
+                    
 
                             
-.linear-gradient-background {
-    background-image: linear-gradient(
-        rgba(232, 102, 236, 0.3) 0%
-        rgba(232, 102, 236, 0.6) 100%
-    );
-}
+    .linear-gradient-background {
+        background-image: linear-gradient(
+            rgba(232, 102, 236, 0.3) 0%
+            rgba(232, 102, 236, 0.6) 100%
+        );
+    }
                         </pre>
                 </div>
                 <div class="card">
@@ -95,35 +105,42 @@ repeat(12, 1fr);
                         <p>
                             Use transition and box shadoes to glow on hover.
                         </p>
-                            <pre>
+                            <pre class="linear-gradient-background">
 
 
-.code-card .card-header {
-    border-raduis: 8px;
-    transition: all 0.5s ease-in-out;
-}
-                    
-.code-card:hover, .code-card:hover .card-header {
-    box-shadow: inset 0px 0px 8px
-rgba(232, 102, 236, 1), 0 0 15px
-rgba(232, 102, 236, 1);
-}
+    .code-card .card-header {
+        border-raduis: 8px;
+        transition: all 0.5s ease-in-out;
+    }
+                        
+    .code-card:hover, .code-card:hover .card-header {
+        box-shadow: inset 0px 0px 8px
+    rgba(232, 102, 236, 1), 0 0 15px
+    rgba(232, 102, 236, 1);
+    }
 
                             </pre>
                 </div>
                 <div class="card">
-                    <div class="title">
-                        CSS Grid Layout
+                    <div class="title" id="overlay-title">
+                        Overlay Card with Title
                     </div>
                         <p>
                             Build a 12-column layout using CSS Grid.
                         </p>
-                            <pre>
+                            <pre class="linear-gradient-background">
 
 
-    .column {
-        display: flex;
-        flex-direction: column;
+
+
+           
+                                
+
+
+
+    .card-header {
+        position: relative;
+        margin-top: -20px;
     }
                             </pre>
                 </div>

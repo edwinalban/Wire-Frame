@@ -1,14 +1,21 @@
+:root {
+    --darker:  rgb(0, 0, 0);
+    --lighter:  rgba(139, 158, 244, 0.6);
+}
+
 * {
     box-sizing: border-box;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 body {
-    margin: 5em;
+    background-color: var(--darker);
+    color: var(--lighter);
 }
 
 header {
     text-align: center;
+    margin-bottom: 25px;
 }
 
 .row {
@@ -20,33 +27,51 @@ header {
     flex: 1;
     justify-content: space-evenly;
     position: relative;
-    border: dashed blue 1px;
-    margin: 20px 10px 20px 10px;
-    padding: 2em 1% 1% 1%;
+    border: dashed var(--lighter) 1px;
+    border-radius: 10px;
+    margin: 20px 10px 30px 10px;
+    padding: 2em 1% 0 2%;
     min-width: 370px;
 }
 
 .title {
     position: absolute;
-    left: 35%;
-    top: -5%;
-    border: solid purple 0.1vw;
+    left: 32%;
+    top: -10%;
+    border: solid var(--lighter) 0.1vw;
+    padding: 3%;
     z-index: 1;
-    background-color: grey;
+    background-color: var(--darker);
     border-radius: 5px;
-    
+    font-size: x-large;
 }
 
 #linear-title {
     position: absolute;
-    top: -3%;
-    left: 35%;
+    top: -8%;
+    left: 30%;
 }
 
 #box-glow-title {
     position: absolute;
-    top: -3%;
-    left: 30%;
+    top: -12%;
+    left: 25%;
+    max-width: fit-content;
+}
+
+#overlay-title {
+    position: absolute;
+    top: -12%;
+    right: 25%;
+    max-width: fit-content;
+}
+
+.linear-gradient-background {
+    background-image: linear-gradient(
+        rgba(11, 11, 12, 0.3) 0%,
+        rgba(139, 158, 244, 0.6) 100%
+    );
+    border-radius: 10px;
 }
 
 @media screen and (min-width: 768px) {
