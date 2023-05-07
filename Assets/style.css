@@ -1,43 +1,77 @@
+/* sets variable colors for reuse */
 :root {
     --darker:  rgb(0, 0, 0);
     --lighter:  rgba(139, 158, 244, 0.6);
 }
 
+/* sets sizes of boxes to border and font options universally */
 * {
     box-sizing: border-box;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
+/* sets bg color and text color for body */
 body {
     background-color: var(--darker);
     color: var(--lighter);
 }
 
+/* aligns header text to center and adds margin to bottom of header */
 header {
     text-align: center;
-    margin-bottom: 25px;
+    margin-bottom: 10%;
+    font-size: 1.5rem;
 }
 
+p {
+    font-size: 1.2rem;
+}
+
+/* allows pre code content to wrap */
+pre {
+    white-space: pre-wrap;
+}
+
+/* causes all elements in row div container to wrap when viewport shrinks */
 .row {
     display: flex;
     flex-wrap: wrap;
 }
 
+/* allows cards to grow from min-size 370px, spaces them evenly in available viewport space */
+/* sets card borders, rounded corners, adds margin/padding */
 .card {
     flex: 1;
-    justify-content: space-evenly;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
     position: relative;
     border: dashed var(--lighter) 1px;
     border-radius: 10px;
-    margin: 20px 10px 30px 10px;
-    padding: 2em 1% 0 2%;
+    margin: 20px 10px 50px 10px;
+    padding: 2em 1% 0 1%;
     min-width: 370px;
 }
 
+/* rounds corners on card titles, delays hover glow on titles */
+.card .title {
+    border-radius: 8px;
+    transition: all 0.5s ease-in-out;
+}
+
+/* causes cards/titles to glow on hover */
+.card:hover, .card:hover .title {
+    box-shadow: inset 0px 0px 8px
+rgba(232, 102, 236, 1), 0 0 15px
+rgba(232, 102, 236, 1);
+}
+
+/* positions titles relative to cards, adds borders/padding, allows titles to overlap cards */
+/* sets titles bg color, rounds corners, sets font size */
 .title {
     position: absolute;
-    left: 32%;
-    top: -10%;
+    left: 25%;
+    top: -6%;
     border: solid var(--lighter) 0.1vw;
     padding: 3%;
     z-index: 1;
@@ -46,33 +80,45 @@ header {
     font-size: x-large;
 }
 
+/* postiions "Linear Gradients" card title */
 #linear-title {
     position: absolute;
-    top: -8%;
-    left: 30%;
+    top: -6%;
+    left: 25%;
 }
 
+/* postiions "Box Transition Glow" card title */
 #box-glow-title {
     position: absolute;
-    top: -12%;
-    left: 25%;
+    top: -6%;
+    left: 20%;
     max-width: fit-content;
 }
 
+/* postiions "Overlay Card with Title" card title */
 #overlay-title {
     position: absolute;
-    top: -12%;
+    top: -9%;
     right: 25%;
     max-width: fit-content;
 }
 
+/* sets bg for card content, rounds content corners */
 .linear-gradient-background {
     background-image: linear-gradient(
         rgba(11, 11, 12, 0.3) 0%,
         rgba(139, 158, 244, 0.6) 100%
     );
     border-radius: 10px;
+    align-items: stretch;
 }
+
+/* allows selecting of code blocks on click */
+#user-select {
+    flex: 0 1 100%;
+    user-select: all;
+}
+
 
 @media screen and (min-width: 768px) {
     .row {
